@@ -5,3 +5,22 @@
 .form-control {
     margin: 0 5px 0 5px;
 }
+
+.isHidden {
+    display: none;
+}
+
+table {
+    margin: 20px;
+}
+
+td {
+    height: 30px;
+    width: 30px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.alive {
+    background-color: #2ca02c;
+}

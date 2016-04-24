@@ -3,7 +3,6 @@
 use gameOfLife\Classes\Board;
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +13,30 @@ use gameOfLife\Classes\Board;
 </head>
 <body>
 <div class="container">
-    <div class="boardSize">
-        <form class="form-group form-inline">
+    <div class="boardSizeForm">
+        <form class="form-group form-inline" action="" method="post">
             <label for="height">Wysokość: </label>
-            <input class="form-control" type="number" name="height" id="height">
+            <input class="form-control height" type="number" name="height" id="height">
             <label for="width">Szerokość: </label>
-            <input class="form-control" type="number" name="width" id="width">
-            <input type="button" class="btn btn-success" value="Wygeneruj">
+            <input class="form-control width" type="number" name="width" id="width">
+            <input type="button" class="btn btn-success generateButton" value="Wygeneruj">
         </form>
+    </div>
+    <div class="boardContainer isHidden">
+        <h3>Zaznacz początkowe ustawienie</h3>
+        <div class="board">
+            <form class="form-group form-inline" action="" method="POST">
+                <label for="numberOfSteps">Ilość kroków: </label>
+                <input class="form-control" type="number" name="numberOfSteps" id="numberOfSteps">
+                <input class="btn btn-success startButton" type="submit" value="START!">
+            </form>
+            <a class="btn btn-default"> KROK PO KROKU</a>
+            <a class="btn btn-default"> RESTART</a>
+        </div>
     </div>
 </div>
 </body>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/generateBoard.js"></script>
+    <script src="js/selectCells.js"></script>
 </html>
