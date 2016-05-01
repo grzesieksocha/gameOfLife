@@ -1,5 +1,4 @@
 $(document).on('click', 'td', function () {
-    console.log("clicked");
     $(this).toggleClass("alive");
     var coordinates = $(this).data('coordinates');
     $.ajax({
@@ -9,12 +8,6 @@ $(document).on('click', 'td', function () {
         dataType: 'json',
         success: function (result) {
             console.log(result);
-        },
-        error: function () {   
-            console.log('ERROR');
-        },
-        complete: function () {
-            console.log('DONE');
         }
     })
 });

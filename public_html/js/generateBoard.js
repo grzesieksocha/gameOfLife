@@ -6,7 +6,6 @@ $(document).ready(function () {
 
         var height = $(".height").val();
         var width = $(".width").val();
-        var board = "<table>";
 
         $.ajax({
             url: '../../src/Controllers/generateBoard.php',
@@ -16,13 +15,6 @@ $(document).ready(function () {
             success: function (board) {
                 var boardAdded = $(board);
                 $(".board").prepend(boardAdded);
-                console.log(result);
-            },
-            error: function () {
-                console.log('ERROR');
-            },
-            complete: function () {
-                console.log('DONE');
             }
         });
     })

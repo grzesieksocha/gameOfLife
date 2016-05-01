@@ -13,7 +13,7 @@ $_SESSION['aliveCells'] = [];
 </head>
 <body>
 <div class="container">
-    <div class="boardSizeForm">
+    <div class="boardSizeForm col-md-8 col-md-offset-2">
         <form class="form-group form-inline" action="" method="post">
             <label for="height">Wysokość: </label>
             <input class="form-control height" type="number" name="height" id="height">
@@ -22,15 +22,16 @@ $_SESSION['aliveCells'] = [];
             <input type="button" class="btn btn-success generateButton" value="Wygeneruj">
         </form>
     </div>
-    <div class="boardContainer isHidden">
-        <h3>Zaznacz początkowe ustawienie</h3>
+    <div class="boardContainer isHidden col-md-8 col-md-offset-2">
+        <h3 class="titleBegin">Zaznacz początkowe ustawienie</h3>
+        <h3 class="titlePlay isHidden">Rozgrywka:</h3>
         <div class="board">
             <form class="form-group form-inline" action="" method="POST">
                 <label for="numberOfSteps">Ilość kroków: </label>
-                <input class="form-control" type="number" name="numberOfSteps" id="numberOfSteps">
+                <input class="form-control numberOfSteps" type="number" name="numberOfSteps" id="numberOfSteps">
                 <input class="btn btn-success startButton" type="submit" value="START!">
             </form>
-            <a class="btn btn-default"> KROK PO KROKU</a>
+            <a class="btn btn-default nextStep"> KROK PO KROKU</a>
             <a class="btn btn-default" href="index.php"> RESTART</a>
         </div>
     </div>
@@ -39,4 +40,6 @@ $_SESSION['aliveCells'] = [];
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/generateBoard.js"></script>
     <script src="js/selectCells.js"></script>
+    <script src="js/nextStep.js"></script>
+    <script src="js/manySteps.js"></script>
 </html>
