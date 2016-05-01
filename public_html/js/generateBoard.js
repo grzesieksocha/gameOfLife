@@ -8,17 +8,22 @@ $(document).ready(function () {
         var width = $(".width").val();
         var board = "<table>";
 
-        for (var i = 0; i < height; i++) {
-            board += "<tr>";
-            for (var j = 0; j < width; j++) {
-                board += "<td data-coordinates='" + i + "," + j + "'></td>";
+        $.ajax({
+            url: '../../src/Controllers/generateBoard.php',
+            type: 'POST',
+            data: {height: height, width: width},
+            dataType: 'html',
+            success: function (board) {
+                var boardAdded = $(board);
+                $(".board").prepend(boardAdded);
+                console.log(result);
+            },
+            error: function () {
+                console.log('ERROR');
+            },
+            complete: function () {
+                console.log('DONE');
             }
-            board += "</tr>";
-        }
-        board += "</table>";
-
-        var boardAdded = $(board);
-
-        $(".board").prepend(boardAdded);
+        });
     })
 });

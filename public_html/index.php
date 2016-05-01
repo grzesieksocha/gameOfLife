@@ -1,13 +1,13 @@
 <?php
-
-use gameOfLife\Classes\Board;
-
+session_start();
+$_SESSION['aliveCells'] = [];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game of Life</title>
+    <title>Gra w życie</title>
     <link rel="stylesheet" type="text/css" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -31,7 +31,7 @@ use gameOfLife\Classes\Board;
                 <input class="btn btn-success startButton" type="submit" value="START!">
             </form>
             <a class="btn btn-default"> KROK PO KROKU</a>
-            <a class="btn btn-default"> RESTART</a>
+            <a class="btn btn-default" href="index.php"> RESTART</a>
         </div>
     </div>
 </div>
