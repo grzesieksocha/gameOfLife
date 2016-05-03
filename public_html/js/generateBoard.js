@@ -4,17 +4,17 @@ $(document).ready(function () {
         $(".boardSizeForm").toggleClass("isHidden");
         $(".boardContainer").toggleClass("isHidden");
 
-        var height = $(".height").val();
-        var width = $(".width").val();
+        var BoardHeight = $(".height").val();
+        var BoardWidth = $(".width").val();
 
         $.ajax({
             url: '../../src/Controllers/generateBoard.php',
             type: 'POST',
-            data: {height: height, width: width},
+            data: {BoardHeight: BoardHeight, BoardWidth: BoardWidth},
             dataType: 'html',
-            success: function (board) {
-                var boardAdded = $(board);
-                $(".board").prepend(boardAdded);
+            success: function (generatedBoard) {
+                var boardToAdd = $(generatedBoard);
+                $(".board").prepend(boardToAdd);
             }
         });
     })

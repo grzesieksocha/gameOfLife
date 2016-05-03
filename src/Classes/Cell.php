@@ -1,6 +1,6 @@
 <?php
 
-//namespace gameOfLife\Classes;
+namespace gameOfLife\Classes;
 
 class Cell
 {

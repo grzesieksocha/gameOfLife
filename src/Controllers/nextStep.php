@@ -1,7 +1,8 @@
 <?php
 session_start();
-require "../Classes/Player.php";
-require "../Classes/BoardDrawer.php";
+require "../../vendor/autoload.php";
+use gameOfLife\Classes\Player;
+use gameOfLife\Classes\BoardDrawer;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 {

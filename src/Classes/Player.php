@@ -1,6 +1,6 @@
 <?php
 
-require "Cell.php";
+namespace gameOfLife\Classes;
 
 class Player
 {

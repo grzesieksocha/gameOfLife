@@ -1,5 +1,7 @@
 <?php
 
+namespace gameOfLife\Classes;
+
 class BoardDrawer
 {
     public static function drawBoard($coordinates = [])
